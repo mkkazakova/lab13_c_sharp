@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppForMobile.ClientPage" Title="Информация о клиенте">
+    <StackLayout>
+        <Label Text="Имя" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="Тариф" />
+        <Entry Text="{Binding TariffId}" />
+        <Label Text="Наличие IP адресса" />
+        <Entry Text="{Binding IPaddress}" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Сохранить" Clicked="SaveClient" />
+            <Button Text="Удалить" Clicked="DeleteClient" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppForMobile.ListTariffPage" Title="Список тарифов">
+    <StackLayout>
+        <Button Text="Добавить" Clicked="CreateTariff" />
+        <ListView x:Name="tariffsList" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Скорость" />
+                                <Label Text="{Binding InternetSpeed}" />
+                                <Label Text="Мб" />
+                                <Label Text="{Binding MaxValume}" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
